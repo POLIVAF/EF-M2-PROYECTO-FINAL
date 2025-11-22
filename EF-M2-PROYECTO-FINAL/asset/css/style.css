@@ -5,16 +5,71 @@
 }
 
 h1 {
-  font-size: calc(2rem + 2vw);
-  font-weight: 700;
-  line-height: 1.2;
+  font-size: calc(3rem + 4vw);
+  font-weight: 800;
+  line-height: 1.1;
 }
 .hero {
-  background: linear-gradient(rgba(36, 0, 70, 0.85), rgba(67, 97, 238, 0.9)),
-    url("https://images.unsplash.com/photo-1505373877841-8d25f771d0b7?q=80&w=2012")
-      center/cover no-repeat;
+  position: relative;
   min-height: 100vh;
   color: white;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  background: url("https://images.unsplash.com/photo-1505373877841-8d25f771d0b7?q=80&w=2012")
+    center/cover no-repeat;
+}
+
+/* Capa animada respirando */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(36, 0, 70, 0.75), rgba(67, 97, 238, 0.75), rgba(140, 82, 255, 0.75));
+  background-size: 200% 200%;
+  animation: breathing 8s ease-in-out infinite;
+  z-index: 1;
+}
+
+/* PATRÓN HEXAGONAL */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("../img/hexagon-texture.jpeg") center/cover;
+  opacity: 0.25;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Contenido arriba */
+.hero > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Tu imagen de fondo original */
+
+
+/* Para que el contenido quede arriba */
+.hero > * {
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes breathing {
+  0% {
+    background-position: 0% 50%;
+    filter: brightness(0.95);
+  }
+  50% {
+    background-position: 100% 50%;
+    filter: brightness(1.12);
+  }
+  100% {
+    background-position: 0% 50%;
+    filter: brightness(0.95);
+  }
 }
 .speaker-img {
   width: 180px;
@@ -30,4 +85,9 @@ footer a {
 }
 footer a:hover {
   color: white;
+}
+.display-2 {
+  font-size: calc(3rem + 4vw) !important;
+  font-weight: 800 !important;
+  line-height: 1.1;
 }
