@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="es">
+<<<<<<< HEAD
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SUMMER TECH 2026 | Conferencia de Tecnología, Innovación y Responsabilidad Digital</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #4361ee;
+      --dark: #240046;
+      --light: #f8f9fa;
+    }
+    .hero {
+      background: linear-gradient(rgba(36, 0, 70, 0.85), rgba(67, 97, 238, 0.9)), url('https://images.unsplash.com/photo-1505373877841-8d25f771d0b7?q=80&w=2012') center/cover no-repeat;
+      min-height: 100vh;
+      color: white;
+    }
+    .speaker-img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border: 5px solid white;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+  
+    footer a { color: #a5b4fc; text-decoration: none; }
+    footer a:hover { color: white; }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background: var(--dark);">
+    <div class="container">
+      <a class="navbar-brand fw-bold fs-3" href="#">Summer Tech</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#conferencistas">Conferencistas</a></li>
+          <li class="nav-item"><a class="nav-link" href="#agenda">Agenda</a></li>
+          <li class="nav-item"><a class="nav-link" href="#registro">Registro</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <header id="inicio" class="hero d-flex align-items-center">
+    <div class="container text-center">
+      <h1 class="display-2 fw-bold mb-4">Summer Tech</h1>
+      <p class="lead fs-3 mb-4">LA SUPER CONFERENCIA</p>
+      <p class="fs-4 mb-5">FEBRERO 2026 · Lugar aun a convenir</p>
+      
+      <!-- COUNTDOWN -->
+      <div class="countdown text-warning mb-5" id="countdown"></div>
+      
+      <div class="d-grid gap-3 d-md-flex justify-content-center">
+        <a href="#registro" class="btn btn-warning btn-lg px-5 py-3 fs-5">¡Inscríbete Ahora!</a>
+        <a href="#conferencistas" class="btn btn-outline-light btn-lg px-5 py-3 fs-5">Ver Conferencistas</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container my-5">
+
+    <!-- CONFERENCISTAS -->
+    <section id="conferencistas" class="py-5">
+      <h2 class="text-center display-4 mb-5 text-primary">Grandes Conferencisyas</h2>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card h-100 text-center border-0 shadow-lg">
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" class="card-img-top rounded-circle speaker-img mx-auto mt-4" alt="Ana López">
+            <div class="card-body">
+              <h5 class="card-title">Conferencista 1</h5>
+              <p class="text-muted">de donde viene</p>
+              <p>titulo de la conferencia</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 text-center border-0 shadow-lg">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" class="card-img-top rounded-circle speaker-img mx-auto mt-4" alt="Carlos Mendoza">
+            <div class="card-body">
+              <h5 class="card-title">Conferencista 2</h5>
+              <p class="text-muted">De donde viene</p>
+              <p>Tema de la conferencia</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 text-center border-0 shadow-lg">
+            <img src="https://randomuser.me/api/portraits/women/68.jpg" class="card-img-top rounded-circle speaker-img mx-auto mt-4" alt="María Torres">
+            <div class="card-body">
+              <h5 class="card-title">Conferencista 3</h5>
+              <p class="text-muted">De donde viene</p>
+              <p>Titulo de la conferencia</p>
+            </div>
+          </div>
+        </div>
+      </div>
+        <div class="col">
+          <div class="card h-100 text-center border-0 shadow-lg">
+            <img src="https://randomuser.me/api/portraits/women/56.jpg" class="card-img-top rounded-circle speaker-img mx-auto mt-4" alt="Ana López">
+            <div class="card-body">
+              <h5 class="card-title">Conferencista 4</h5>
+              <p class="text-muted">de donde viene</p>
+              <p>titulo de la conferencia</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 text-center border-0 shadow-lg">
+            <img src="https://randomuser.me/api/portraits/women/69.jpg" class="card-img-top rounded-circle speaker-img mx-auto mt-4" alt="Carlos Mendoza">
+            <div class="card-body">
+              <h5 class="card-title">Conferencista 6</h5>
+              <p class="text-muted">De donde viene</p>
+              <p>Tema de la conferencia</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 text-center border-0 shadow-lg">
+            <img src="https://randomuser.me/api/portraits/women/68.jpg" class="card-img-top rounded-circle speaker-img mx-auto mt-4" alt="María Torres">
+            <div class="card-body">
+              <h5 class="card-title">Conferencista 3</h5>
+              <p class="text-muted">De donde viene</p>
+              <p>Titulo de la conferencia</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+      
+    </section>
+
+    <!-- AGENDA  -->
+    <section id="agenda" class="py-5 bg-light rounded-4">
+      <h2 class="text-center display-4 mb-5 text-primary">Agenda del Evento</h2>
+      <div class="accordion accordion-flush" id="agendaAccordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#dia1">
+              Febrero 2026
+            </button>
+          </h2>
+          <div id="dia1" class="accordion-collapse collapse show" data-bs-parent="#agendaAccordion">
+            <div class="accordion-body">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Inauguracion</li>
+                <li class="list-group-item">Conferencia 1</li>
+                <li class="list-group-item">Conferencia 2</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+    </section>
+
+    <!-- REGISTRO  -->
+    <section id="registro" class="py-5 text-center">
+      <h2 class="display-4 mb-5">Inscribete</h2>
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+          <button type="button" class="btn btn-primary btn-lg px-5" data-bs-toggle="modal" data-bs-target="#registroModal">
+            Inscribete Aqui
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal de Registro -->
+    <div class="modal fade" id="registroModal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-primary text-white">
+            <h5 class="modal-title">Refistro</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3"><input type="text" class="form-control" placeholder="Nombre completo" required></div>
+              <div class="mb-3"><input type="email" class="form-control" placeholder="Email" required></div>
+              <div class="mb-3"><input type="tel" class="form-control" placeholder="Teléfono"></div>
+              <div class="mb-3">
+                <select class="form-select">
+                  <option>Entrada</option>
+                  <option>Entrada</option>
+                  <option>Entrada</option>
+                </select>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-success">Confirmar Inscripción</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-dark text-white py-5">
+    <div class="container text-center">
+      <p class="fs-4 mb-3">Grupo 3 Derechos Reservados</p>
+      <p>
+        <a href="#" class="me-3"><i class="bi bi-instagram fs-3"></i></a>
+        <a href="#" class="me-3"><i class="bi bi-linkedin fs-3"></i></a>
+        <a href="#"><i class="bi bi-twitter-x fs-3"></i></a>
+      </p>
+    </div>
+  </footer>
+ 
+</body>
+</html>
+=======
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portafolio Profesional - Pablo Olivares Figueroa</title>
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      href="./assets/img/favicon/favicon.ico"
+      type="image/x-icon"
+    />
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- css -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!-- Jquery-->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <p>HOLA PABLO</p>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="py-5">
+      <div class="container">
+        <h2 class="text-center text-primary mb-4">Contáctame</h2>
+
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <!-- FORMULARIO -->
+            <form id="formContacto" class="needs-validation" novalidate>
+              <!-- Nombre -->
+              <div class="mb-3">
+                <label class="form-label text-primary">Nombre</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nombre"
+                  placeholder="Tu nombre"
+                  pattern="^[A-Za-zÁÉÍÓÚáéíóúÑñ ]+$"
+                  required
+                />
+                <div class="invalid-feedback">
+                  Solo letras. Campo obligatorio.
+                </div>
+              </div>
+
+              <!-- Email -->
+              <div class="mb-3">
+                <label class="form-label text-primary"
+                  >Correo electrónico</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="correo@dominio.com"
+                  required
+                />
+                <div class="invalid-feedback">Correo inválido.</div>
+              </div>
+
+              <!-- Mensaje -->
+              <div class="mb-3">
+                <label class="form-label text-primary">Mensaje</label>
+                <textarea
+                  class="form-control"
+                  id="mensaje"
+                  rows="4"
+                  required
+                ></textarea>
+                <div class="invalid-feedback">Debes escribir un mensaje.</div>
+              </div>
+
+              <!-- Botón -->
+              <div class="text-center mt-3">
+                <button class="btn btn-primary btn-lg px-4" type="submit">
+                  Enviar
+                </button>
+              </div>
+            </form>
+
+            <!-- Texto de éxito (opcional si usas modal) -->
+            <div id="mensajeExito" class="text-center text-success mt-4"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-white text-center py-3">
+      <p class="m-0" style="color: #6a0dad; font-weight: 600">
+        &copy; 2025 Conferencia Tecnología Digital 2026 - Todos los derechos
+        reservados.
+      </p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- refactorizacion a Jquery-->
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
+>>>>>>> 1f175190be0b206e49b829b001799caed4b146c1
