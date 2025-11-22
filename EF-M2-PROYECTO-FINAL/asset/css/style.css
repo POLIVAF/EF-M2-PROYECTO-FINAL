@@ -4,7 +4,7 @@
   --purple: #861beb;        /* Morado para gradientes y detalles */
   --dark: #2c0155;          /* Morado oscuro */
   --light: #f8f9fa;         /* Fondo claro */
-  --gold: #ffd700;           /* Amarillo para hover y link activo */
+  --gold: #ffd700;          /* Amarillo para hover y link activo */
   --footer-gradient-start: #3a0ca3;
   --footer-gradient-middle: #7209b7;
   --footer-gradient-end: #b5179e;
@@ -20,17 +20,18 @@ body {
   padding-top: 60px; /* Ajusta según la altura final de tu navbar */
   color: var(--dark);
 }
-/* Contenedor centrado al 80% en desktop */
-    .wrapper {
-      width: 100%;
-      margin: 0 auto;
-    }
 
-    @media (min-width: 992px) {
-      .wrapper {
-        width: 80%;
-      }
+/* Contenedor centrado al 80% en desktop */
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media (min-width: 992px) {
+  .wrapper {
+    width: 80%;
   }
+}
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
@@ -39,12 +40,19 @@ h1, h2, h3, h4, h5, h6 {
 
 /* HERO */
 .hero {
+  margin: 0;
+  padding: 0;
+  width: 100%;
   position: relative;
   min-height: 100vh;
   color: white;
   display: flex;
   align-items: center;
   overflow: hidden;
+}
+.hero .container {
+  padding-top: 0;
+  margin-top: 0;
 }
 
 .hero::before {
@@ -62,7 +70,7 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   inset: 0;
   background: url("../img/hexagon-texture.jpeg") center/cover;
-  opacity: 0.40;
+  opacity: 0.4;
   filter: brightness(1.1) contrast(1.05);
   z-index: 1;
   pointer-events: none;
@@ -130,62 +138,25 @@ footer a:hover {
   opacity: 0.75;
 }
 
-/* TITULOS */
-.display-2 {
-  font-size: calc(3rem + 4vw) !important;
-  font-weight: 800 !important;
-  line-height: 1.1;
-}
-
-/* NAVBAR */
-.navbar-nav .nav-link {
-  position: relative;
-  transition: color 0.2s ease;
-}
-
-.navbar-nav .nav-link::after {
-  content: "";
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: var(--gold);
-  transition: width 0.2s ease;
-}
-
-.navbar-nav .nav-link:hover::after {
-  width: 100%;
-}
-
-.navbar-nav .nav-link.active {
-  color: var(--gold) !important;
-}
-
+/* Navbar azul elegante */
 .navbar.navbar-dark.navbar-custom {
-  background-color: var(--primary);
+  background-color: #1e3a8a; /* azul elegante */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
-.navbar.navbar-dark.navbar-custom .nav-link {
+/* Links y hover */
+.navbar-nav .nav-link {
   color: #f8f9fa;
+  transition: color 0.2s ease;
+  position: relative;
 }
 
-.navbar.navbar-dark.navbar-custom .nav-link:hover,
-.navbar.navbar-dark.navbar-custom .nav-link.active {
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
   color: #ffd700;
 }
 
-/* FLIP CLOCK */
-.countdown-clock {
-  max-width: 900px;
-  margin: 0 auto;
-  text-align: center;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-}
-
+/* Flip clock */
 .flip-unit {
   display: flex;
   flex-direction: column;
