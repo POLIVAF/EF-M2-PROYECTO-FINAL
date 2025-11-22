@@ -37,19 +37,11 @@ h1 {
   position: absolute;
   inset: 0;
   background: url("../img/hexagon-texture.jpeg") center/cover;
-  opacity: 0.25;
+  opacity: 0.18;
+  filter: brightness(1.1) contrast(1.05);
   z-index: 1;
   pointer-events: none;
 }
-
-/* Contenido arriba */
-.hero > * {
-  position: relative;
-  z-index: 2;
-}
-
-/* Tu imagen de fondo original */
-
 
 /* Para que el contenido quede arriba */
 .hero > * {
@@ -79,12 +71,30 @@ h1 {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
-footer a {
-  color: #a5b4fc;
+/* FOOTER TRANSPARENTE */
+footer {
+  background: transparent !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  box-shadow: none !important;
+  border: none !important;
+  text-align: center;
+}
+
+/* Texto del footer en degradado morado */
+footer p, 
+footer a, 
+footer span {
+  background: linear-gradient(135deg, #3a0ca3, #7209b7, #b5179e);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: 600;
   text-decoration: none;
 }
+
 footer a:hover {
-  color: white;
+  opacity: 0.75;
 }
 .display-2 {
   font-size: calc(3rem + 4vw) !important;
