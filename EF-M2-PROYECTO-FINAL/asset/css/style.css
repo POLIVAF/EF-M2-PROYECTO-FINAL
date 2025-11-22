@@ -17,8 +17,20 @@
 body {
   font-family: var(--font-body);
   background-color: var(--light);
+  padding-top: 60px; /* Ajusta según la altura final de tu navbar */
   color: var(--dark);
 }
+/* Contenedor centrado al 80% en desktop */
+    .wrapper {
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    @media (min-width: 992px) {
+      .wrapper {
+        width: 80%;
+      }
+  }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
