@@ -1,16 +1,19 @@
 $(document).ready(function () {
-
   // ==========================
   // SMOOTH SCROLL NAVBAR
   // ==========================
-  $('a.nav-link').on('click', function (event) {
+  $("a.nav-link").on("click", function (event) {
     if (this.hash !== "") {
       event.preventDefault();
       const hash = this.hash;
 
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top - 70
-      }, 1500, 'swing');
+      $("html, body").animate(
+        {
+          scrollTop: $(hash).offset().top - 70,
+        },
+        1500,
+        "swing"
+      );
     }
   });
 
@@ -18,11 +21,11 @@ $(document).ready(function () {
   // BLOQUEAR CARACTERES INVALIDOS
   // ==========================
   $("#nombre").on("input", function () {
-    this.value = this.value.replace(/[^A-Za-zÁÉÍÓÚáéíóúÑñ\s]/g, '');
+    this.value = this.value.replace(/[^A-Za-zÁÉÍÓÚáéíóúÑñ\s]/g, "");
   });
 
   $("#telefono").on("input", function () {
-    this.value = this.value.replace(/[^0-9\+]/g, '');
+    this.value = this.value.replace(/[^0-9\+]/g, "");
   });
 
   // ==========================
@@ -35,39 +38,54 @@ $(document).ready(function () {
     let entrada = $("#entrada").val();
 
     $(".invalid-feedback").remove();
-    $("#alertaFormulario").removeClass("alert alert-success alert-danger").addClass("d-none").html("");
+    $("#alertaFormulario")
+      .removeClass("alert alert-success alert-danger")
+      .addClass("d-none")
+      .html("");
 
     let errores = false;
 
     if (!nombre) {
-      $("#nombre").after('<div class="invalid-feedback d-block text-danger">Campo obligatorio</div>');
+      $("#nombre").after(
+        '<div class="invalid-feedback d-block text-danger">Campo obligatorio</div>'
+      );
       errores = true;
     }
 
     if (!email) {
-      $("#email").after('<div class="invalid-feedback d-block text-danger">Campo obligatorio</div>');
+      $("#email").after(
+        '<div class="invalid-feedback d-block text-danger">Campo obligatorio</div>'
+      );
       errores = true;
     } else {
       const regexEmail = /^[^\s@]+@[^\s@]+\.[A-Za-z]{2,}$/;
       if (!regexEmail.test(email)) {
-        $("#email").after('<div class="invalid-feedback d-block text-danger">Email inválido</div>');
+        $("#email").after(
+          '<div class="invalid-feedback d-block text-danger">Email inválido</div>'
+        );
         errores = true;
       }
     }
 
     if (!telefono) {
-      $("#telefono").after('<div class="invalid-feedback d-block text-danger">Campo obligatorio</div>');
+      $("#telefono").after(
+        '<div class="invalid-feedback d-block text-danger">Campo obligatorio</div>'
+      );
       errores = true;
     }
 
     if (!entrada) {
-      $("#entrada").after('<div class="invalid-feedback d-block text-danger">Debe seleccionar un tipo de entrada</div>');
+      $("#entrada").after(
+        '<div class="invalid-feedback d-block text-danger">Debe seleccionar un tipo de entrada</div>'
+      );
       errores = true;
     }
 
     if (errores) {
       setTimeout(() => {
-        $(".invalid-feedback").fadeOut(500, function() { $(this).remove(); });
+        $(".invalid-feedback").fadeOut(500, function () {
+          $(this).remove();
+        });
       }, 3000);
       return;
     }
@@ -75,7 +93,9 @@ $(document).ready(function () {
     $("#alertaFormulario")
       .removeClass("d-none alert-danger")
       .addClass("alert alert-success")
-      .html("<strong>Reservación exitosa:</strong> Te has inscrito correctamente.")
+      .html(
+        "<strong>Reservación exitosa:</strong> Te has inscrito correctamente."
+      )
       .fadeIn();
 
     setTimeout(() => {
@@ -93,7 +113,9 @@ $(document).ready(function () {
   const eventDate = new Date("2026-02-01T00:00:00").getTime();
   let flipInterval;
 
-  function pad(n) { return n < 10 ? "0" + n : n; }
+  function pad(n) {
+    return n < 10 ? "0" + n : n;
+  }
 
   function createFlipUnit(id, label) {
     return `
@@ -109,9 +131,9 @@ $(document).ready(function () {
   const countdownContainer = $("#countdown");
   countdownContainer.html(
     createFlipUnit("days", "Días") +
-    createFlipUnit("hours", "Horas") +
-    createFlipUnit("minutes", "Minutos") +
-    createFlipUnit("seconds", "Segundos")
+      createFlipUnit("hours", "Horas") +
+      createFlipUnit("minutes", "Minutos") +
+      createFlipUnit("seconds", "Segundos")
   );
 
   function flipNumber(id, value) {
@@ -150,5 +172,4 @@ $(document).ready(function () {
 
   updateFlipClock(); // inicio inmediato
   flipInterval = setInterval(updateFlipClock, 1000);
-
 });
