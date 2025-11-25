@@ -89,10 +89,12 @@ h6 {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg,
-      rgba(36, 0, 70, 0.75),
-      rgba(67, 97, 238, 0.75),
-      rgba(140, 82, 255, 0.75));
+  background: linear-gradient(
+    135deg,
+    rgba(36, 0, 70, 0.75),
+    rgba(67, 97, 238, 0.75),
+    rgba(140, 82, 255, 0.75)
+  );
   background-size: 200% 200%;
   animation: breathing 8s ease-in-out infinite;
   z-index: 1;
@@ -109,7 +111,7 @@ h6 {
   pointer-events: none;
 }
 
-.hero>* {
+.hero > * {
   position: relative;
   z-index: 2;
 }
@@ -182,30 +184,39 @@ footer {
   text-align: center;
 }
 
-footer p,
-footer a,
-footer span {
-  background: linear-gradient(135deg,
-      var(--footer-gradient-start),
-      var(--footer-gradient-middle),
-      var(--footer-gradient-end));
+footer a {
+  text-decoration: none; /* No subrayado */
+  display: inline-block; /* Evita que el ícono se corte */
+  padding: 10px; /* Espacio para evitar cortes */
+}
+
+footer a i {
+  /* Tamaño del ícono */
+  color: #870bda; /* Color normal */
+  transition: none; /* Eliminamos animaciones */
+}
+
+footer .copyright {
+  background: linear-gradient(
+    135deg,
+    var(--footer-gradient-start),
+    var(--footer-gradient-middle),
+    var(--footer-gradient-end)
+  );
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   font-weight: 600;
-  text-decoration: none;
-}
-
-footer a:hover {
-  opacity: 0.75;
 }
 
 /* Navbar respirando */
 .navbar.navbar-dark.navbar-custom {
-  background: linear-gradient(135deg,
-      rgba(36, 0, 70, 0.75),
-      rgba(67, 97, 238, 0.75),
-      rgba(140, 82, 255, 0.75));
+  background: linear-gradient(
+    135deg,
+    rgba(36, 0, 70, 0.75),
+    rgba(67, 97, 238, 0.75),
+    rgba(140, 82, 255, 0.75)
+  );
   background-size: 200% 200%;
   animation: breathing 8s ease-in-out infinite;
   width: 100%;
@@ -220,9 +231,9 @@ footer a:hover {
 /* Solo cambiar color de los links a blanco */
 .navbar-nav .nav-link {
   font-family: "SourceCodePro", monospace;
-  font-weight: 700;              /* ← SourceCodePro-Bold aplicada */
+  font-weight: 700; /* ← SourceCodePro-Bold aplicada */
   font-size: 1rem;
-  letter-spacing: 0.5px;         /* (opcional) más elegante */
+  letter-spacing: 0.5px; /* (opcional) más elegante */
   color: #ffffff !important;
   transition: color 0.2s ease;
   position: relative;
